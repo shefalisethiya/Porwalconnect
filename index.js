@@ -10,7 +10,7 @@ const nodemailer = require("nodemailer");
 // const multer = require("multer");
 const path = require("path");
 const axios = require("axios");
-const promisify = require("express-promisify");
+// const promisify = require("express-promisify");
 const cors = require("cors");
 app.use(cors());
 const bodyParser = require("body-parser");
