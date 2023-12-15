@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Porwal connect</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">  
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<style>
+   .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus .dropdown-content {
+  display: block;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background-color: #ddd;
+}
+
+.submenu {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  margin-left: 10px;
+}
+
+.submenu li {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+    
+    </style>
+<body>
+     <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div> 
+        <!-- Spinner End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-dark px-0">
+            <div class="row gx-0">
+                <div class="col-lg-3 bg-dark d-none d-lg-block">
+                    <a href="/dropdown" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                        <img src="./img/logo.jpg" alt="jai narsingh"  height="60">  <h3 class="m-0 text-primary text-uppercase">
+                            Porwal Bazar</h3>
+                    </a>
+                </div>
+                <div class="col-lg-9">
+                      <div class="row gx-0 bg-white d-none d-lg-flex">
+                        <div class="col-lg-6 px-4 text-start">
+                             <div class="h-100 d-inline-flex align-items-center py-2 me-4">
+                                <i class="fa fa-envelope text-primary me-2"></i>
+                                <a href="/memberregister">Register Here</a>
+ 
+                             </div> 
+                             <div class="h-100 d-inline-flex align-items-center py-2">
+                                <i ></i>
+                                 <!-- <p class="mb-0">+012 345 6789</p> -->
+                             </div>
+                        </div>
+                         <div class="col-lg-5 px-5 text-end">
+                            <div class="d-inline-flex align-items-center py-2">
+                                <a href="/memberlogin">login</a> 
+                                <!-- <a class="me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="me-3" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="me-3" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="me-3" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="" href=""><i class="fab fa-youtube"></i></a> -->
+                            </div>
+                        </div> 
+                    </div> 
+                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
+                        <a href="/dropdown" class="navbar-brand d-block d-lg-none">
+                            <h6 class="m-0 text-primary text-uppercase">Porwal connect</h6>
+                        </a>
+                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                            <div class="navbar-nav mr-auto py-0">
+                                <a href="/dropdown" class="nav-item nav-link">Home</a>
+                                <a href="/materimony" class="nav-item nav-link">materimony</a>
+                                <a href="/socialactivity" class="nav-item nav-link">social activity</a>
+                                <a href="/postfaq" class="nav-item nav-link">FAQ</a>
+                                <a href="/postfeedback" class="nav-item nav-link">feedback/suggestion</a>
+                                    <a href="/postcontact" class="nav-item nav-link">contactus</a>
+                                    <!-- <div class="nav-item dropdown">
+                                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">shopping</a>
+                                        <div class="dropdown-menu rounded-0 m-0">
+                                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Grocery & Cleaning Chemical</a>
+                                            <a href="./namkeensweetbakery.html" class="dropdown-item">Namkeen\sweets\Bakery /Food Beveragess</a>
+                                            <!-- <a href="./grocerycleaningchemical.html" class="dropdown-item">Namkeen\sweets\Bakery /Food Beveragess</a> -->
+                
+                                            <!-- <a href="./grocerycleaningchemical.html" class="dropdown-item">Home & Kitchen Decor</a> 
+                                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Health & Herbal Medicine</a>
+                                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Car, Motor bikes/Two Wheeler & auto parts</a>
+                                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Agriculture Input & Equipments</a>
+                                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Book & Stationary</a>
+                                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Electric & Electronics</a>
+                                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Gold, Silver & Artificial Jewellery</a>
+                                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Natural Farming Training & Product</a>
+                                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Men Fashion</a> 
+                                            <a href="./grocerycleaningchemical.html" class="dropdown-item">WoMen Fashion</a>
+                                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Kids & Toys Product</a>
+                                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Bag &Luggage</a>
+                                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Sport & Fitness Equipments</a>
+                                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Commercial Vehicle & Auto Parts</a>
+                                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Hardware & Sanitary</a>
+                                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Festivals Decor</a>
+                                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Property & Brokerage</a>
+                                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Mobile & Accessories</a> -->
+                                                                       <!-- <div class="submenu">
+                                                <ul>
+                                                    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Rice</a></li>
+                                                    <li><a style="color: white; font-weight: bold; font-size: 20px;" href="./buynow.html">Pulse</a></li>
+                                                     Add more grocery items here -->
+                                                <!-- </ul>  -->
+                                            </div>
+                                        
+                                        <div class="dropdown-menu rounded-0 m-0">
+                                            <!-- <a href="#" class="dropdown-item">Namkeen/Sweets/Bakery/Food Beverages</a>
+                                            <div class="submenu">
+                                                <ul>
+                                                    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Cold drinks/Soft Drinks</a></li>
+                                                    <li><a style="color: white; font-weight: bold; font-size: 20px;" href="./buynow.html">Pulse</a></li>
+                                                     Add more namkeen/sweets/bakery/food beverages items here -->
+                                                </ul>
+                                            </div> 
+                                        </div>
+
+                                <!-- <a href="about.html" class="nav-item nav-link active">About</a> -->
+                                <!-- <a href="service.html" class="nav-item nav-link">Services</a> -->
+                                <!-- <a href="room.html" class="nav-item nav-link">Rooms</a> -->
+                                <!-- <div class="nav-item dropdown"> -->
+                                    <!-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Posts</a> -->
+                                    <div class="dropdown-menu rounded-0 m-0">
+                                        
+                                        <!-- <a href="testimonial.html" class="dropdown-item">Cultural activity -->
+
+                                        </a>
+                                        <!-- <a href="business.html" class="dropdown-item">Business -->
+
+
+                                        </a>
+                                        <!-- <a href="newideas.html" class="dropdown-item">welcome new creative ideas -->
+
+
+                                        </a>
+                                       
+                                    </div>
+                                </div>
+                                <div class="navbar-nav mr-auto py-0">
+                                    <!-- <a href="./feedback.html" class="nav-item nav-link">feedback/suggestion</a> -->
+                                    <!-- <a href="./feedback.html" class="nav-item nav-link">contactus</a> -->
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('.dropdown-item.dropdown-toggle').click(function(e) {
+      e.preventDefault();
+      $(this).next('.dropdown-menu').slideToggle();
+    });
+  });
+</script>
+<!-- <div class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">shopping</a>
+    <div class="dropdown-menu rounded-0 m-0">
+        <a href="materimony.html" class="dropdown-item">Grocery & Cleaning Chemical
+        </a>
+    <div class="submenu">
+      <ul>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Rice</a></li>
+        <li><a style="color: white; font-weight: bold; font-size: 20px;" href="./buynow.html">Pulse</a></li>
+        <li> <a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Flour</a></li>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Gram-Flour</a></li>
+       <li> <a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Soyabean oil</a></li>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Ground nut oil</a></li>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Spleen oil</a></li>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Mustard oil </a></li>
+        <li> <a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Sunflower oil</a></li>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Coconut oil</a></li>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Hair oil</a></li>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Sugar</a></li>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Tea</a></li>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Turmeric</a></li>
+        <li> <a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Green Tea</a></li>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Coriander</a></li>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Salt </a></li>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Chilli</a></li>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Spices</a></li>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Dry Food </a></li>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Ground Peanut</a></li>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Sago </a></li>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Mordhan</a></li>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Rajgira</a></li>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Hing</a></li>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Ghee</a></li>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Rock Salt</a></li>
+        <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Biscuit</a></li>
+      </ul>
+    </div>
+    
+  </div>
+  <div class="dropdown-menu rounded-0 m-0">
+    <a href="materimony.html" class="dropdown-item">Grocery & Cleaning Chemical
+    </a>
+<div class="submenu">
+  <ul>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Rice</a></li>
+    <li><a style="color: white; font-weight: bold; font-size: 20px;" href="./buynow.html">Pulse</a></li>
+    <li> <a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Flour</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Gram-Flour</a></li>
+   <li> <a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Soyabean oil</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Ground nut oil</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Spleen oil</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Mustard oil </a></li>
+    <li> <a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Sunflower oil</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Coconut oil</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Hair oil</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Sugar</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Tea</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Turmeric</a></li>
+    <li> <a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Green Tea</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Coriander</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Salt </a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Chilli</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Spices</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Dry Food </a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Ground Peanut</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Sago </a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Mordhan</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Rajgira</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Hing</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Ghee</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Rock Salt</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Biscuit</a></li>
+  </ul>
+</div>
+<div class="dropdown-menu rounded-0 m-0">
+    <a href="materimony.html" class="dropdown-item">Namkeen\sweets\Bakery /Food Beveragess
+    </a>
+<div class="submenu">
+  <ul>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Cold drinks/Soft Drinks</a></li>
+    <li><a style="color: white; font-weight: bold; font-size: 20px;" href="./buynow.html">Pulse</a></li>
+    <li> <a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Water Bottle</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Sev, Mixture/Gathiya/Moong Dal/Fariyali Mixture/Papad/Papdi/Nukti/Chana Masala</a></li>
+   <li> <a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">alltypes of sweets</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Ground nut oil</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Spleen oil</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Mustard oil </a></li>
+    <li> <a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Sunflower oil</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Coconut oil</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Hair oil</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Sugar</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Tea</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Turmeric</a></li>
+    <li> <a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Green Tea</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Coriander</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Salt </a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Chilli</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Spices</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Dry Food </a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Ground Peanut</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Sago </a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Mordhan</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Rajgira</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Hing</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Ghee</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Rock Salt</a></li>
+    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Biscuit</a></li>
+  </ul>
+</div>
+</div>
+</div>
+
+                             <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
+                        </div>
+                        
+                    
+                    <!-- <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">shopping</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Grocery & Cleaning Chemical</a>
+                            <a href="./namkeensweetbakery.html" class="dropdown-item">Namkeen\sweets\Bakery /Food Beveragess</a>
+                             <a href="./grocerycleaningchemical.html" class="dropdown-item">Namkeen\sweets\Bakery /Food Beveragess</a> -->
+
+                            <!-- <a href="./grocerycleaningchemical.html" class="dropdown-item">Home & Kitchen Decor</a> 
+                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Health & Herbal Medicine</a>
+                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Car, Motor bikes/Two Wheeler & auto parts</a>
+                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Agriculture Input & Equipments</a>
+                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Book & Stationary</a>
+                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Electric & Electronics</a>
+                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Gold, Silver & Artificial Jewellery</a>
+                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Natural Farming Training & Product</a>
+                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Men Fashion</a> 
+                            <a href="./grocerycleaningchemical.html" class="dropdown-item">WoMen Fashion</a>
+                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Kids & Toys Product</a>
+                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Bag &Luggage</a>
+                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Sport & Fitness Equipments</a>
+                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Commercial Vehicle & Auto Parts</a>
+                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Hardware & Sanitary</a>
+                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Festivals Decor</a>
+                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Property & Brokerage</a>
+                            <a href="./grocerycleaningchemical.html" class="dropdown-item">Mobile & Accessories</a>
+                             <div class="submenu"> -->
+                                <ul>
+                                    <!-- <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Rice</a></li>
+                                    <li><a style="color: white; font-weight: bold; font-size: 20px;" href="./buynow.html">Pulse</a></li>
+                                     Add more grocery items here  -->
+                                <!-- </ul>  -->
+                            </div>
+                        
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <!-- <a href="#" class="dropdown-item">Namkeen/Sweets/Bakery/Food Beverages</a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a class="dropdown-item" style="color: white; font-weight: bold; font-size: 18px;" href="./buynow.html">Cold drinks/Soft Drinks</a></li>
+                                    <li><a style="color: white; font-weight: bold; font-size: 20px;" href="./buynow.html">Pulse</a></li>
+                                     Add more namkeen/sweets/bakery/food beverages items here -->
+                                </ul>
+                            </div> 
+                        </div> 
+                    </div>
+                    </div>
+                    
+                </div>
+            </div>
+           </nav>
+        </div>
+        <!-- Header End -->
+
+
+        <!-- Carousel Start -->
+        <div class="container-fluid p-0 mb-5">
+            <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3" style="max-width: 700px;">
+                                <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">quality products</h6>
+                                <h1 class="display-3 text-white mb-4 animated slideInDown">Discover A Brand</h1>
+                                <a href="./exploremore.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">enhance bussiness</a>
+                                <a href="./materimony.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">not to go anywhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3" style="max-width: 700px;">
+                                <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown"></h6>
+                                <h1 class="display-3 text-white mb-4 animated slideInDown">Discover A Brand</h1>
+                                <a href="/shopping" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">qualty product</a>
+                                <a href="/shopping" class="btn btn-light py-md-3 px-md-5 animated slideInRight">enhance business</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- Carousel End -->
+
+
+        <!-- Booking Start -->
+        <!-- <div class="container">
+            <div class="bg-white shadow" style="padding: 35px;">
+                <div class="row g-2">
+                    <div class="col-md-10">
+                       
+                                        </div>
+                                          </div>
+                                          
+                                </div> -->
+                                <!-- <div class="col-md-3">
+                                    <div class="date" id="date2" data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input" placeholder="Text" />
+                                    </div>
+                                </div>  -->
+                                <!-- <div class="col-md-3">
+                                    <select class="form-select">
+                                        <option selected>Child</option>
+                                        <option value="1">Child 1</option>
+                                        <option value="2">Child 2</option>
+                                        <option value="3">Child 3</option>
+                                    </select>
+                                </div> -->
+                            <!-- </div>
+                        
+                         <div class="col-md-2">
+                            <button class="btn btn-primary w-100" onclick="getproductdata()">Submit</button>
+                        </div> </div>
+                    </div>
+                </div>
+        Contact Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title text-center text-primary text-uppercase">
+              Contact Us
+            </h6>
+            <h1 class="mb-5">
+              <span class="text-primary text-uppercase">Contact</span> For Any
+              Query
+            </h1>
+          </div>
+          <div class="row g-4">
+            <div class="col-12">
+              <div class="row gy-4">
+                <div class="col-md-4">
+                  <h6
+                    class="section-title text-start text-primary text-uppercase"
+                  >
+                    membershipquery/call
+                  </h6>
+                  <p>
+                    <i class="fa fa-envelope-open text-primary me-2"></i
+                    >7489941189
+                  </p>
+                </div>
+                <div class="col-md-4">
+                  <h6
+                    class="section-title text-start text-primary text-uppercase"
+                  >
+                    Generalquery / call
+                  </h6>
+                  <p>
+                    <i class="fa fa-envelope-open text-primary me-2"></i
+                    >7489941189
+                  </p>
+                </div>
+                <div class="col-md-4">
+                  <h6
+                    class="section-title text-start text-primary text-uppercase"
+                  >
+                    Technicalquery/whatsapp
+                  </h6>
+                  <p>
+                    <i class="fa fa-envelope-open text-primary me-2"></i
+                    >8109553925
+                  </p>
+                  
+                </div>
+                <div class="col-md-4">
+                  <h6
+                    class="section-title text-start text-primary text-uppercase"
+                  >
+                    suggestion/whatsapp
+                  </h6>
+                  <p>
+                    <i class="fa fa-envelope-open text-primary me-2"></i
+                    >8109553925/7489941189
+                  </p>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.4627969220423!2d75.84531587290446!3d22.71103368236153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fda62879ddf1%3A0xf695fe6c36b69941!2sLekhan%20Pathan%20Book%20Store!5e0!3m2!1sen!2sin!4v1688541534059!5m2!1sen!2sin" width="550" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              
+            </div>
+            <div class="col-md-6">
+              <div class="wow fadeInUp" data-wow-delay="0.2s">
+                <form>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder="Your Name"
+                        />
+                        <label for="name">Your Name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-floating">
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          placeholder="Your Email"
+                        />
+                        <label for="email">Your Email</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="subject"
+                          placeholder="Subject"
+                        />
+                        <label for="subject">Subject</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <textarea
+                          class="form-control"
+                          placeholder="Leave a message here"
+                          id="message"
+                          style="height: 150px"
+                        ></textarea>
+                        <label for="message">Message</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      
+                      <button
+                    type="button" onclick="send()"
+                    class="btn btn-primary w-100 py-3"
+                  >
+                    Send message
+                  </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Contact End -->
+
+
+
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
+                        <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">Porwal connect</span></h1>
+                        <p class="mb-4">जय श्री लक्ष्मी नृसिंह पोरवाल बाजार ऑनलाइन बिजनेस डायरेक्ट है, जिसके लिए आप सभी लोगो के सुझाव आमंत्रित करते हैं। आप अपनी सलाह प्रतिक्रिया/सुझाव पर जा कर दे सकते हैं उद्देश: इस एप का उद्देश पोरवाल समाज को आर्थिक, सामाजिक और सांस्कृतिक आधार पर और अधिक सक्षम बनाना, समाज के व्यक्ति समाज से जुड़े हुए हैं ताकि नौकरी और व्यवसाय से व्यापार किया जा सके।
+                            <a href="./busibessregister">busibessregister</a></p></h6> 
+                        </p>
+                        <div class="row g-3 pb-4">
+                            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
+                                <div class="border rounded p-1">
+                                    <div class="border rounded text-center p-4">
+                                        <i class="fa fa-hotel fa-2x text-primary mb-2"></i>
+                                        <h2 class="mb-1" data-toggle="counter-up">100</h2>
+                                        <p class="mb-0">ideas</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="border rounded p-1">
+                                    <div class="border rounded text-center p-4">
+                                        <i class="fa fa-users-cog fa-2x text-primary mb-2"></i>
+                                        <h2 class="mb-1" data-toggle="counter-up">20</h2>
+                                        <p class="mb-0">implemented</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="border rounded p-1">
+                                    <div class="border rounded text-center p-4">
+                                        <i class="fa fa-users fa-2x text-primary mb-2"></i>
+                                        <h2 class="mb-1" data-toggle="counter-up">100</h2>
+                                        <p class="mb-0">members work</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="btn btn-primary py-3 px-5 mt-2" href="/shopping">Explore More</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="img/p1.jpg" style="margin-top: 25%;">
+                            </div>
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/p2.jpg">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.2s" src="img/p3.jpg">
+                            </div>
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.2s" src="img/p4.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+       
+
+        <!-- Video Start -->
+        <div class="container-xxl py-5 px-0 wow zoomIn" data-wow-delay="0.1s">
+            <div class="row g-0">
+                <div class="col-md-6 bg-dark d-flex align-items-center">
+                    <div class="p-5">
+                        <h6 class="section-title text-start text-white text-uppercase mb-3">Growth of Porwal's community</h6>
+                        <h1 class="text-white mb-4">Porwal connect Enchance</h1>
+                        <p class="text-white mb-4">जय श्री लक्ष्मी नृसिंह पोरवाल बाजार ऑनलाइन बिजनेस डायरेक्ट है, जिसके लिए आप सभी लोगो के सुझाव आमंत्रित करते हैं। आप अपनी सलाह प्रतिक्रिया/सुझाव पर जा कर दे सकते हैं उद्देश: इस एप का उद्देश पोरवाल समाज को आर्थिक, सामाजिक और सांस्कृतिक आधार पर और अधिक सक्षम बनाना, समाज के व्यक्ति समाज से जुड़े हुए हैं ताकि नौकरी और व्यवसाय से व्यापार किया जा सके।</p>
+                        <a href="/shopping" class="btn btn-primary py-md-3 px-md-5 me-3">business</a>
+                        <a href="/materimony" class="btn btn-light py-md-3 px-md-5">materimony</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div >
+                        <img src="./img/pimage.jpg" alt="porwal samaj" width="500" height="800">
+                        <!-- <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbFpnSFozN3laaU5HVWxkT0lzVk1YZFhMU2FkQXxBQ3Jtc0tsTDFyV2pjX0o4Y3ZhN0ZVY1lmalhpYlk1dGkzdXg3QkhsbHMwTE1HckFJV2dtbl9zNzVtLTJXUnJjSDE5cDBJUzZFVmJ0bHBUQzhnc3VkWnozMnVobkNLMDc0dzRlQ1dGZF9qVndHd3NqRFJ2alBWSQ&q=https%3A%2F%2Fbit.ly%2F3F2veSs&v=a27XsqTIyT4" data-bs-target="#videoModal"> -->
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                                allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Video Start -->
+
+
+        <!-- Service Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase">business </h6>
+                    <h1 class="mb-5">Explore  <span class="text-primary text-uppercase">category</span></h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <a class="service-item rounded" href="/shopping">
+                            <div class="service-icon bg-transparent border rounded p-1">
+                                <div class="w-80 h-80 border rounded d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-hotel fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <h6 class="mb-3">Grocery & Cleaning Chemical</h6>
+                            <p class="text-body mb-0">Rice, Pulse, Flour, Gram-Flour, oil, Hair oil, Sugar, Tea, Tea, Salt, Chilli, Spices, Dry Food, Ground Peanut,  Ghee, Biscuit</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-3 wow fadeInUp" data-wow-delay="0.2s">
+                        <a class="service-item rounded" href="/shopping">
+                            <div class="service-icon bg-transparent border rounded p-1">
+                                <div class="w-80 h-80 border rounded d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-utensils fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <h6 class="mb-3">Namkeen\sweets\Bakery /Food Beveragess</h6>
+                            <p class="text-body mb-0"> Soft Drinks, Juice, Milk, Milk Powder, Butter, Cheese, Bread, Sev, Mixture,	Gathiya, Moong Dal, Fariyali Mixture, Papad, Papdi, Nukti, Chana Masala, </p>
+                                <!-- <br>Restaurant:- Masala Dosa, Pani puri, Samosa, Kachoi, Poha, Jalebi, Chinese Food, Allu Paratha, lachcha paratha, sada paratha, dudh jalebi, malai, sweet, khaman</p> -->
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <a class="service-item rounded" href="/shopping">
+                            <div class="service-icon bg-transparent border rounded p-1">
+                                <div class="w-80 h-80 border rounded d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-spa fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <h5 class="mb-3">Health & Herbal Medicine</h5>
+                            <p class="text-body mb-0">Green tea, Vitamin tablet, calcium tablet, andromass powder, chawanprash, bourn vita</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <a class="service-item rounded" href="/shopping">
+                            <div class="service-icon bg-transparent border rounded p-1">
+                                <div class="w-80 h-80 border rounded d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-spa fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <h6 class="mb-3">Home & Kitchen Decor</h6>
+                            <p class="text-body mb-0">Sofa, Dining Table, Dressing Table, Tea Table, Chair, Bed, Bed sheet, Pillow, Blanket Foot
+                                Rack Cupboard,  Dinner Set, Cup Set, Glass Set, Dustbin, Jar, Tea Strainer, Water Strainer, Non Stick Tawa,  Cooker</p>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 wow fadeInUp" data-wow-delay="0.4s">
+                        <a class="service-item rounded" href="/shopping">
+                            <div class="service-icon bg-transparent border rounded p-1">
+                                <div class="w-80 h-80 border rounded d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-swimmer fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <h6 class="mb-3">Electric & Electronics</h6>
+                            <p class="text-body mb-0">TV, Home Theater switch, LED light, Led bulb,  Cooler,  Wall fan, RO, Heater,  induction gas, Jhoomar, Street light, Focus light, UPS, Inverter, Meter, Freeze, Air Conditioner, Mixer, Iron,Laptop, Computer</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <a class="service-item rounded" href="/shopping">
+                            <div class="service-icon bg-transparent border rounded p-1">
+                                <div class="w-80 h-80 border rounded d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-glass-cheers fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <h5 class="mb-3">Gold, Silver & Artificial Jewellery</h5>
+                            <p class="text-body mb-0">Artificial Jewellery, Gold Jewellery , Silver Jewellery, Necklace, Neck Chain, Ear Ring, Ring, Nostril,Demand Tick, Armlet, Chandelier, Anklets, Bitch, Hand Flower</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-3 wow fadeInUp" data-wow-delay="0.6s">
+                        <a class="service-item rounded" href="/shopping">
+                            <div class="service-icon bg-transparent border rounded p-1">
+                                <div class="w-80 h-80 border rounded d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-dumbbell fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <h6 class="mb-3">Bag &Luggage</h6>
+                            <p class="text-body mb-0">Traveling bag, Suitcase, School Bag, Collage bag, Office bag, Sport bag, gym bag, Market bag, Tiffin bag, Ladies purse</p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-3 wow fadeInUp" data-wow-delay="0.6s">
+                        <a class="service-item rounded" href="/shopping">
+                            <div class="service-icon bg-transparent border rounded p-1">
+                                <div class="w-80 h-80 border rounded d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-dumbbell fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <h5 class="mb-3">Men/women/kids Fashion&Toy products</h5>
+                            <p class="text-body mb-0"> Watch, Smart WatchWatch, Sports/Formal/ Casual/Rain Shoes, Sleeper, Sandals, Loafer,Mojdi, Jeans, Shirt, T-Shirt, Jacket, Hoodie, Blazer, Formal Casualwear ,Underwear,tradition dress</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+      
+
+      <!-- Newsletter Start -->
+      <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 border rounded p-1">
+                <div class="border rounded text-center p-1">
+                    <div class="bg-white rounded text-center p-5">
+                        <h4 class="mb-4">Subscribe Our <span class="text-primary text-uppercase">Newsletter</span></h4>
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                            <input class="form-control w-100 py-3 ps-4 pe-5" type="text"id="contact" placeholder="Enter your contact">
+                            <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2" onclick="submit()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Newsletter Start -->
+
+     <!-- Footer Start -->
+     <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
+      <div class="container pb-5">
+          <div class="row g-5">
+              <div class="col-md-6 col-lg-4">
+                  <div class="bg-primary rounded p-4">
+                      <a href="/dropdown"><h6 class="text-white text-uppercase mb-3">Porwal connect</h6></a>
+                      <p class="text-white mb-0">
+                          पोरवाल बाजार ऑनलाइन बिजनेस डायरेक्ट है, जिसके लिए आप सभी लोगो के सुझाव आमंत्रित करते हैं। आप अपनी सलाह प्रतिक्रिया/सुझाव पर जा कर दे सकते हैं उद्देश: इस एप का उद्देश पोरवाल समाज को आर्थिक, सामाजिक और सांस्कृतिक आधार पर और अधिक सक्षम बनाना, समाज के व्यक्ति समाज से जुड़े हुए हैं ताकि नौकरी और व्यवसाय से व्यापार किया जा सके।
+        </p>
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                  <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
+                  <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>viraat swadeshi haat Pvt. Ltd.
+                      Uttami Chember
+                      लेखन पठन के ऊपर
+                      1st Floor, छत्रीबाग
+                      पोरवाल लक्ष्मी नरसिंह मंदिर के पास।  
+                      छत्रीबाग, इंदौर</p>
+                  <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>7489941189</p>
+                  <p class="mb-2"><i class="fa fa-envelope me-3"></i>porwalconnect@porwalconnect.com</p>
+                  <div class="d-flex pt-2">
+                      <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a> -->
+                      <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                      <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a> -->
+                      <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a> -->
+                  </div>
+              </div>
+              <div class="col-lg-5 col-md-12">
+                  <div class="row gy-5 g-4">
+                      <div class="col-md-6">
+                          <h6 class="section-title text-start text-primary text-uppercase mb-4">porwal connect</h6>
+                          <a class="btn btn-link" href="/dropdown">home</a>
+                          <a class="btn btn-link" href="/postfaq">FAQ</a>
+                          <a class="btn btn-link" href="/postfeedback">feedback/suggesstion</a>
+                          <a class="btn btn-link" href="/postcontact">Contact Us</a>
+                          <!-- <a class="btn btn-link" href="">Terms & Condition</a>
+                          <a class="btn btn-link" href="">Support</a> -->
+                      </div>
+                      <div class="col-md-6">
+                          <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
+                          <a class="btn btn-link" href="/materimony">materimony</a>
+                          <a class="btn btn-link" href="/socialactivity">social activity</a>
+                          <a class="btn btn-link" href="/shopping">visit items for shopping</a>
+                          <!-- <a class="btn btn-link" href="">Event &party</a>
+                          <a class="btn btn-link" href="">enhance business</a> -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="container">
+          <div class="copyright">
+              <!-- <div class="row"> -->
+                  <!-- <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                       &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.  -->
+        
+        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+        <!-- Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                      <br>Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                  </div>  -->
+                  <div class="col-md-6 text-center text-md-end">
+                      <div class="footer-menu">
+                          <a href="/dropdown">Home</a>
+                          <a href="/postfaq">FAQ</a>
+                          <a href="/postfeedback">Feedback/suggestion</a>
+                          <a href="/postcontact">contactus</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Footer End -->
+
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+</div>
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/tempusdominus/js/moment.min.js"></script>
+<script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+</body>
+
+</html>
+<script>
+function submit() {
+  // Get the form inputs
+  alert("submit successfully")
+  
+  const Contact = document.getElementById('contact').value;
+ 
+  // Create the payload object
+  const payload = {
+    
+    contact: Contact,
+   
+  };
+
+  // Make a POST request to the server
+  fetch('http://localhost:8000/contact', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  })
+    .then(response => response.json())
+    .then(data => {
+      // Handle the response data
+      console.log('contact successful:', data);
+      // Perform any further actions or display success message to the user
+    })
+    .catch(error => {
+      console.error('contact failed:', error);
+      // Handle the error and display an error message to the user
+    });
+}
+
+function send() {
+// Get the form inputs
+const Name = document.getElementById('name').value;
+const Email = document.getElementById('email').value;
+const Subject = document.getElementById('subject').value;
+const Message = document.getElementById('message').value;
+
+
+// Create the payload object
+const payload = {
+  name: Name,
+  email:Email,
+  subject: Subject,
+  message:Message
+
+  
+
+};
+
+// Make a POST request to the server
+fetch('http://localhost:8000/sendquery', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(payload)
+})
+  .then(response => {
+    if (response.ok) {
+      alert('Form submitted successfully');
+    } else {
+      alert('Failed to submit the form');
+    }
+  })
+  .catch(error => {
+    console.error('Error occurred during form submission:', error);
+  });
+};
+
+</script>
+ 
