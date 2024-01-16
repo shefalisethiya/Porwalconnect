@@ -10,7 +10,7 @@ const nodemailer = require("nodemailer");
 // const multer = require("multer");
 const path = require("path");
 const axios = require("axios");
-// const promisify = require("express-promisify");
+const promisify = require("express-promisify");
 const cors = require("cors");
 app.use(cors());
 const bodyParser = require("body-parser");
@@ -22,7 +22,7 @@ app.set("views", path.join(__dirname, "views"));
 // Example for hitting another endpoint from the default endpoint
 app.get("/", (req, res) => {
   // Redirect to another endpoint
-  res.redirect("/home");
+  res.redirect("/dropdown");
 
   // Or render another endpoint's view
   // res.render('another-endpoint');
@@ -77,7 +77,6 @@ app.get("/", async (req, res) => {
 const hostname = "localhost";
 const port = 8085;
 
-// Database credentials
 const connection = mysql.createConnection({
   // host: "localhost",
   // user: "root2",
@@ -393,7 +392,7 @@ app.post("/postmemberdata", upload5.single("bannerImage"), async (req, res) => {
     const result = await connection.execute(query, values);
 
     // Organization added successfully
-    res.status(201).json({ message: "member added successfully" });
+    res.status(201).json({ message: result });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Error adding member to database" });
@@ -1294,27 +1293,27 @@ app.get("/dropdown", async (req, res) => {
     res.status(500).send("Internal Server Error");
   }
 });
-app.get("/home", async (req, res) => {
-  try {
-    const query = "SELECT city FROM member_mast";
-    const query2 = "SELECT cat_name FROM category_mast";
-    const result = await connection.promise().query(query);
-    const result2 = await connection.promise().query(query2);
-    const cities = result[0].map((row) => row.city);
-    const cat = result2[0].map((row) => row.cat_name);
+// app.get("/home", async (req, res) => {
+//   try {
+//     const query = "SELECT city FROM member_mast";
+//     const query2 = "SELECT cat_name FROM category_mast";
+//     const result = await connection.promise().query(query);
+//     const result2 = await connection.promise().query(query2);
+//     const cities = result[0].map((row) => row.city);
+//     const cat = result2[0].map((row) => row.cat_name);
 
-    const data = {
-      cities: cities,
-      cat: cat,
-    };
-    console.log("data", data);
+//     const data = {
+//       cities: cities,
+//       cat: cat,
+//     };
+//     console.log("data", data);
 
-    res.render("home", { data: data });
-  } catch (error) {
-    console.error("Error fetching city data:", error);
-    res.status(500).send("Internal Server Error");
-  }
-});
+//     res.render("home", { data: data });
+//   } catch (error) {
+//     console.error("Error fetching city data:", error);
+//     res.status(500).send("Internal Server Error");
+//   }
+// });
 // 27/6/23 post newsletter data
 
 app.post("/contact", async (req, res) => {
