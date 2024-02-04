@@ -84,7 +84,7 @@ const connection = mysql.createConnection({
   // database: "admin",
   host: "localhost",
   user: "root",
-  password: "",
+  password: "Pass@123",
   database: "pba",
 });
 
@@ -108,6 +108,9 @@ const multer = require("multer");
 // render login file
 app.get("/visitor", (req, res) => {
   return res.render("visitor");
+});
+app.get("/about", (req, res) => {
+  return res.render("about");
 });
 app.get("/login", (req, res) => {
   return res.render("login");
