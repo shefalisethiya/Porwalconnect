@@ -112,6 +112,9 @@ app.get("/gotra", (req, res) => {
 app.get("/about", (req, res) => {
   return res.render("about");
 });
+app.get("/couns", (req, res) => {
+  return res.render("couns");
+});
 app.get("/login", (req, res) => {
   return res.render("login");
 });
