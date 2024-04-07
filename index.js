@@ -107,7 +107,7 @@ const multer = require("multer");
 
 // render login file
 app.get("/test", (req, res) => {
-  return res.render("gotra");
+  return res.render("about");
 });
 app.get("/about", (req, res) => {
   return res.render("about");
