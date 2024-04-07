@@ -106,7 +106,7 @@ const multer = require("multer");
 // const upload = multer({ dest: "images/" });
 
 // render login file
-app.get("/gotra", (req, res) => {
+app.get("/test", (req, res) => {
   return res.render("gotra");
 });
 app.get("/about", (req, res) => {
